@@ -1,40 +1,37 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">QualifApp</a>
+    <a class="navbar-brand" routerLink="/">QualifApp</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          <a class="nav-link active" aria-current="page" routerLink="/accueil">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"routerLink="/information" href="/information">Info</a>
+          <a class="nav-link" routerLink="/information" >Info</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" routerLink="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Services
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
 
-            <li><a class="dropdown-item" href="/service1">Service1</a></li>
-            <li><a class="dropdown-item" href="/service2">Services2</a></li>
+            <li><a class="dropdown-item" routerLink="/service1">Service1</a></li>
+            <li><a class="dropdown-item" routerLink="/service2">Services2</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/sous-service1">sous-service1</a></li>
+            <li><a class="dropdown-item" routerLink="/sous-service1">sous-service1</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/signup" >SignUp</a>
+          <a class="nav-link " routerLink="/inscription" >SignUp</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="/signin">SignIn</a>
+          <a class="nav-link " routerLink="/authentifier">SignIn</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
     </div>
   </div>
 </nav>
