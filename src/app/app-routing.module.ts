@@ -5,14 +5,14 @@ import { AuthentificationComponent } from './authentification/authentification.c
 import { HomeComponent } from './home/home.component';
 import { InformationComponent } from './information/information.component';
 import { InscriptionComponent } from './inscription/inscription.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+
 
 const routes: Routes = [
 
   { path: 'information', component: InformationComponent },
   { path: 'inscription', component: InscriptionComponent },
   { path: 'authentifier', component:AuthentificationComponent },
-  { path: '', component:HomeComponent }
+  { path: 'home', component:HomeComponent }
 
 ];
 

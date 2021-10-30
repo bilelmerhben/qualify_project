@@ -1,0 +1,13 @@
+<h2>Ajouter une entreprise</h2>
+<form #formulaire ="ngForm" (ngSubmit)="submit(formulaire)" >
+<div class="container">
+    <div style="width: 300px;">
+      <input type="text" class="form-control" placeholder="Designation"  name="designation" [(ngModel)]="entreprise.designation">
+    </div>
+    <div style="width: 300px;">
+      <input type="text" class="form-control" placeholder="Address" name="address" [(ngModel)]="entreprise.address">
+    </div>
+    <button  type="submit">Ajouter</button>
+  </div>
+</form>
+
