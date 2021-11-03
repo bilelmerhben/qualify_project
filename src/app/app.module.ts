@@ -3,24 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { InformationComponent } from './information/information.component';
-import { InscriptionComponent } from './inscription/inscription.component';
-import { AuthentificationComponent } from './authentification/authentification.component';
 import { HomeComponent } from './home/home.component';
 import { EntrepriseFormComponent } from './entreprise-form/entreprise-form.component';
-import { EntrepriseServiceService } from './entreprise-service.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { LoginComponent } from './login/login.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
     InformationComponent,
-    InscriptionComponent,
-    AuthentificationComponent,
     HomeComponent,
-    EntrepriseFormComponent
+    EntrepriseFormComponent,
+    LoginComponent,
+    ProfileComponent,
+    BoardAdminComponent,
+    BoardModeratorComponent,
+    BoardUserComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [EntrepriseServiceService],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

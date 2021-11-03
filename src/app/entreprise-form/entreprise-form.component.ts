@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Entreprise } from 'src/entreprise';
 import { EntrepriseServiceService } from '../entreprise-service.service';
 
@@ -11,7 +12,8 @@ import { EntrepriseServiceService } from '../entreprise-service.service';
 export class EntrepriseFormComponent implements OnInit {
 
 
-  constructor(private entrepriseService:EntrepriseServiceService) {
+  constructor(private entrepriseService:EntrepriseServiceService,
+              private router:Router) {
 
    }
   entreprise:Entreprise = new Entreprise();
@@ -27,5 +29,7 @@ error => {
   console.log(error);
 })
 console.log(this.entreprise);
+this.router.navigate(["/"]);
+
 }
 }
